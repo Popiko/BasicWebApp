@@ -9,7 +9,7 @@ public class QueryProcessor {
                     "writer in the English language and the world's pre-eminent dramatist.";
         }
         else if (query.toLowerCase().contains("yali")) {
-            return "yali is a cute girl";
+            return "kali is a cute girl";
         }
 
         return "";
