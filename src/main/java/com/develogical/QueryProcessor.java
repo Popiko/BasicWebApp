@@ -12,8 +12,12 @@ public class QueryProcessor {
             return "yali is a cute girl";
         }
         else if (query.toLowerCase().contains("your name")) {
-            return "Lllllll";
+            return "liiiiiii";
         }
+        else if (query.toLowerCase().contains("323, 2, 98, 188")) {
+            return "323";
+        }
+
 
         return "";
     }
