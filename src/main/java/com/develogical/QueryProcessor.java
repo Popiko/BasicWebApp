@@ -14,7 +14,17 @@ public class QueryProcessor {
             return "yali is a cute girl";
         } else if (query.toLowerCase().contains("your name")) {
             return "liiiiiii";
-        } else if (query.toLowerCase().contains("the largest")) {
+        } else if (query.toLowerCase().contains("multiplied by")) {
+            // %20what%20is%2017%20multiplied%20by%209
+            String str = query.toLowerCase();
+            str = str.replaceAll("[^-?0-9]+", " ");
+            String[] a = str.trim().split(" ");
+            int one = Integer.parseInt(a[0]);
+            int two = Integer.parseInt(a[1]);
+            return String.valueOf(one*two);
+
+        }
+        else if (query.toLowerCase().contains("the largest")) {
             String str = query.toLowerCase();
             str = str.replaceAll("[^-?0-9]+", " ");
             String[] a = str.trim().split(" ");
