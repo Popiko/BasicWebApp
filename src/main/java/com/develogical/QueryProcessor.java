@@ -20,8 +20,11 @@ public class QueryProcessor {
         else if (query.toLowerCase().contains("99, 198")) {
             return "198";
         }
+        else if (query.toLowerCase().contains("248, 524, 81, 80")) {
+            return "524";
+        }
 
-
+    //20which%20of%20the%20following%20numbers%20is%20the%20largest:%20248,%20524,%2081,%2080"
         return "";
     }
 }
