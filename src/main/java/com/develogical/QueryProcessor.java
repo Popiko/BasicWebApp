@@ -1,5 +1,7 @@
 package com.develogical;
 
+import java.util.Locale;
+
 public class QueryProcessor {
 
     public String process(String query) {
@@ -10,24 +12,27 @@ public class QueryProcessor {
         }
         else if (query.toLowerCase().contains("yali")) {
             return "yali is a cute girl";
-        }
-        else if (query.toLowerCase().contains("your name")) {
+        } else if (query.toLowerCase().contains("your name")) {
             return "liiiiiii";
-        }
-        else if (query.toLowerCase().contains("323, 2, 98, 188")) {
-            return "323";
-        }
-        else if (query.toLowerCase().contains("99, 198")) {
-            return "198";
-        }
-        else if (query.toLowerCase().contains("248, 524, 81, 80")) {
-            return "524";
-        }
-        else if (query.toLowerCase().contains("largest: 359, 3")) {
-            return "359";
-        }
+        } else if (query.toLowerCase().contains("the largest")) {
+            String str = query.toLowerCase();
+            str = str.replaceAll("[^-?0-9]+", " ");
+            String[] a = str.trim().split(" ");
+            int temp = Integer.parseInt(a[0]);
+            int index = 0;
+            for (int i = 0; i < a.length; i++) {
+                if (Integer.parseInt(a[i]) > temp) {
+                    temp = Integer.parseInt(a[i]);
+                    index = i;
 
-    //20which%20of%20the%20following%20numbers%20is%20the%20largest:%20248,%20524,%2081,%2080"
+                }
+            }
+            return a[index];
+        }
         return "";
     }
+
+
+
+
 }
