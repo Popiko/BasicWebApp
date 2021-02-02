@@ -16,17 +16,17 @@ public class QueryProcessor {
             return "liiiiiii";
         } else if (query.toLowerCase().contains("multiplied by")) {
             // %20what%20is%2017%20multiplied%20by%209
-            String str = query.toLowerCase();
+            String str = query.toLowerCase().substring(9);
             str = str.replaceAll("[^-?0-9]+", " ");
             String[] a = str.trim().split(" ");
             int one = Integer.parseInt(a[0]);
             int two = Integer.parseInt(a[1]);
-            //return String.valueOf(one*two);
-            return Integer.toString(one*two);
+            return String.valueOf(one*two);
+            //return Integer.toString(one*two);
 
         }
         else if (query.toLowerCase().contains("the largest")) {
-            String str = query.toLowerCase();
+            String str = query.toLowerCase().substring(9);;
             str = str.replaceAll("[^-?0-9]+", " ");
             String[] a = str.trim().split(" ");
             int temp = Integer.parseInt(a[0]);
@@ -42,7 +42,7 @@ public class QueryProcessor {
         }
         else if (query.toLowerCase().contains("plus")) {
             //what is 0 plus 16
-            String str = query.toLowerCase();
+            String str = query.toLowerCase().substring(9);
             str = str.replaceAll("[^-?0-9]+", " ");
             String[] a = str.trim().split(" ");
             int one = Integer.parseInt(a[0]);
