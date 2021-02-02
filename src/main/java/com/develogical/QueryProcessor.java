@@ -10,6 +10,9 @@ public class QueryProcessor {
         }
         else if (query.toLowerCase().contains("yali")) {
             return "yali is a cute girl";
+        },
+        else if (query.toLowerCase().contains("your name")) {
+            return "Lllllll";
         }
 
         return "";
