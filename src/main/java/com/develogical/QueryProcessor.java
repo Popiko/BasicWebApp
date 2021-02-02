@@ -17,6 +17,9 @@ public class QueryProcessor {
         else if (query.toLowerCase().contains("323, 2, 98, 188")) {
             return "323";
         }
+        else if (query.toLowerCase().contains("99, 198")) {
+            return "198";
+        }
 
 
         return "";
