@@ -36,7 +36,14 @@ public class QueryProcessorTest {
     }
     @Test
     public void knowsAboutNumberMul() throws Exception {
-        assertThat(queryProcessor.process("what is 17 multiplied by 9"), containsString("153"));
+        assertThat(queryProcessor.process("what is 3 multiplied by 19"), containsString("57"));
     }
+
+    // what is 0 plus 16
+    @Test
+    public void knowsAboutNumberAdd() throws Exception {
+        assertThat(queryProcessor.process("what is 0 plus 16"), containsString("16"));
+    }
+
 
 }

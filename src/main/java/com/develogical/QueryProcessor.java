@@ -21,7 +21,8 @@ public class QueryProcessor {
             String[] a = str.trim().split(" ");
             int one = Integer.parseInt(a[0]);
             int two = Integer.parseInt(a[1]);
-            return String.valueOf(one*two);
+            //return String.valueOf(one*two);
+            return Integer.toString(one*two);
 
         }
         else if (query.toLowerCase().contains("the largest")) {
