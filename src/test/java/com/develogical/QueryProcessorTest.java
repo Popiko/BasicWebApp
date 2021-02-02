@@ -32,17 +32,17 @@ public class QueryProcessorTest {
 
     @Test
     public void knowsAboutNumber() throws Exception {
-        assertThat(queryProcessor.process("which of the following numbers is the largest: 431, 69, 38, 946"), containsString("946"));
+        assertThat(queryProcessor.process("68514740: which of the following numbers is the largest: 431, 69, 38, 946"), containsString("946"));
     }
-    @Test
+    @Test // 68514740: what is 6 multiplied by 5
     public void knowsAboutNumberMul() throws Exception {
-        assertThat(queryProcessor.process("what is 3 multiplied by 19"), containsString("57"));
+        assertThat(queryProcessor.process("68514740: what is 6 multiplied by 5"), containsString("30"));
     }
 
     // what is 0 plus 16
     @Test
     public void knowsAboutNumberAdd() throws Exception {
-        assertThat(queryProcessor.process("what is 0 plus 16"), containsString("16"));
+        assertThat(queryProcessor.process("68514740: what is 0 plus 16"), containsString("16"));
     }
 
 
