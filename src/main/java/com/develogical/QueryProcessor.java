@@ -49,6 +49,15 @@ public class QueryProcessor {
             int two = Integer.parseInt(a[1]);
             return String.valueOf(one+two);
         }
+        else if (query.toLowerCase().contains("minus")) {
+            //what is 0 plus 16
+            String str = query.toLowerCase().substring(9);
+            str = str.replaceAll("[^-?0-9]+", " ");
+            String[] a = str.trim().split(" ");
+            int one = Integer.parseInt(a[0]);
+            int two = Integer.parseInt(a[1]);
+            return String.valueOf(one-two);
+        }
         return "";
     }
 
